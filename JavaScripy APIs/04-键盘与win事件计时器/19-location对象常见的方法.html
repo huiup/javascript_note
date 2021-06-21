@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            // 跳转页面（与href一样）：记录浏览历史，所以可以实现后退功能
+            // location.assign('http://www.itcast.cn');
+
+            // 替换当前页面：不记录浏览历史，所以不可以实现后退功能
+            // location.replace('http://www.itcast.cn');
+
+            // 重新加载页面，相当于刷新按钮或者f5，如果参数为true强制刷新ctrl+f5
+            location.reload(true);
+
+            /* 强制刷新：网页浏览后，一般会在本地留下缓存，普通刷新的话，浏览器会优先
+            获取缓存里的资源代替从服务器上请求，以提高访问速度，比如图片，强制刷新
+            就是告诉浏览器不要获取缓存，重新从服务器请求网页上的所有资源，
+            适用于开发测试或者某些资源更新比较实时的网站。 */
+        })
+    </script>
+</body>
+
+</html>

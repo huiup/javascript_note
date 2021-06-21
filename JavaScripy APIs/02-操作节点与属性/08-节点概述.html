@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 一般地，节点至少拥有nodeType(节点类型 ) 、nodeName(节点名称）和nodeValue(节点值)这三个基本属性。
+    元素节点nodeType为1
+    属性节点nodeType为2
+    文本节点nodeType为3(包括文字，空格，换行) -->
+
+
+
+
+    <!-- 节点的优点 -->
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <div class="box">
+        <span class="erweima">×</span>
+    </div>
+    <script>
+        var box = document.querySelector('.box');
+        console.dir(box);
+    </script>
+</body>
+
+</html>
