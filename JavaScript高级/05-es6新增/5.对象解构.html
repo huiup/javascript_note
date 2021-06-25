@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>对象解构</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		// 对象解构允许我们使用变量的名字匹配对象的属性 匹配成功 将对象属性的值赋值给变量
+
+		var person = {
+			name: 'lisi',
+			age: 30,
+			sex: '男'
+		};
+		// 对象解构中的变量名要一致
+		// var { name, age, sex } = person;
+		// console.log(name) // lisi
+		// console.log(age) // 30
+		// console.log(sex) // 男
+
+		let { name: myName } = person; // myName为匹配到的属性值变量名
+		console.log(myName)
+
+	</script>
+</body>
+
+</html>

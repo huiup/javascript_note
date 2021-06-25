@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数面试题</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var age = 100;
+
+		var obj = {
+			age: 20,
+			say: () => {
+				alert(this.age)
+			}
+		}
+
+		obj.say(); // 这里的this指向为window，定义了age则为window的age，否则为 undefined
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>经典面试题</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+
+		// 由于for循环并不是一个函数体，所以for循环中定义的变量i与arr同级（全局）
+		var arr1 = [];
+		for (var i = 0; i < 2; i++) {
+			arr1[i] = function () {
+				console.log(i);
+			}
+		}
+		arr1[0](); // 2 全局变量i的值
+		arr1[1](); // 2
+
+		let arr2 = [];
+		for (let i = 0; i < 2; i++) {
+			arr2[i] = function () {
+				console.log(i);
+			}
+		}
+		arr2[0](); // 0
+		arr2[1](); // 1
+	</script>
+</body>
+
+</html>

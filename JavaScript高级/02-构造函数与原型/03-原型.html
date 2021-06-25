@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 原型是什么？   一个对象，我们称为prototype为原型对象
+        // 原型的作用是什么？    共享方法
+
+
+        // 1. 构造函数的问题. 每创建一个实例对象，其sing方法都会开辟一个内存空间单独存储
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+            // this.sing = function() {
+            //     console.log('我会唱歌');
+            // }
+        }
+        // 2. 一般情况下,我们的公共属性定义到构造函数里面, 公共的方法我们放到原型对象身上
+        // 构造函数通过原型分配的函数是所有对象所共享的。
+        Star.prototype.sing = function () {
+            console.log('我会唱歌');
+        }
+        var ldh = new Star('刘德华', 18);
+        var zxy = new Star('张学友', 19);
+        console.log(ldh.sing === zxy.sing); // 有原型对象则为true，
+        // console.dir(Star);
+        ldh.sing();
+        zxy.sing();
+
+
+    </script>
+</body>
+
+</html>
